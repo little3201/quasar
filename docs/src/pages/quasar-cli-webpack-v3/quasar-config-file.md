@@ -147,7 +147,7 @@ Let's take each option one by one:
 | ssr | Object | SSR specific [config](/quasar-cli-webpack-v3/developing-ssr/configuring-ssr). |
 | electron | Object | Electron specific [config](/quasar-cli-webpack-v3/developing-electron-apps/configuring-electron). |
 
-### Property: css
+### css
 Global CSS/Sass/... files from `/src/css/`, except for theme files, which are included by default.
 
 ```js /quasar.config file
@@ -159,7 +159,7 @@ return {
 }
 ```
 
-### Property: vendor
+### vendor
 By default, everything that comes from `node_modules` will be injected into the vendor chunk for performance & caching reasons. However, should you wish to add or remove something from this special chunk, you can do so:
 
 ```js /quasar.config file
@@ -174,7 +174,7 @@ return {
 }
 ```
 
-### Property: framework
+### framework
 Tells the CLI what Quasar components/directives/plugins to import, what Quasar I18n language pack to use, what icon set to use for Quasar components and more.
 
 Filling "components" and "directives" is required only if "all" is set to `false`.
@@ -210,7 +210,7 @@ return {
 
 More on cssAddon [here](/layout/grid/introduction-to-flexbox#flex-addons).
 
-### Property: devServer
+### devServer
 **Webpack devServer options**. Take a look at the [full list](https://webpack.js.org/configuration/dev-server/) of options. Some are overwritten by Quasar CLI based on "quasar dev" parameters and Quasar mode in order to ensure that everything is setup correctly. Note: if you're proxying the development server (i.e. using a cloud IDE or local tunnel), set the `webSocketURL` setting in the `client` section to your public application URL to allow features like Live Reload and Hot Module Replacement to work as [described here](https://webpack.js.org/configuration/dev-server/#websocketurl).
 
 Most used properties are:
@@ -299,7 +299,7 @@ build: {
 // ...
 ```
 
-### Property: build
+### build
 | Property | Type | Description |
 | --- | --- | --- |
 | transpile | Boolean | Enables or disables Babel transpiling. |
@@ -345,7 +345,7 @@ The following properties of `build` are automatically configured by Quasar CLI d
 
 If, for example, you run "quasar build --debug", sourceMap and extractCSS will be set to "true" regardless of what you configure.
 
-### Property: htmlVariables
+### htmlVariables
 
 You can define and then reference variables in /index.html or /src/index.template.html, like this:
 
@@ -367,7 +367,7 @@ Then (just an example showing you how to reference a variable defined above, in 
 <%= some.prop %>
 ```
 
-### Property: sourceFiles
+### sourceFiles
 Use this property to change the default names of some files of your website/app if you have to. All paths must be relative to the root folder of your project.
 
 ```js /quasar.config file
